@@ -15,6 +15,7 @@
         </div>
         <div>
             <ul class="nav navbar-nav">
+                <li><a href="produto-lista.php">Produtos</a></li>
               <li><a href="produto-formulario.php">Adiciona Produto</a></li>
             </ul>
         </div>
