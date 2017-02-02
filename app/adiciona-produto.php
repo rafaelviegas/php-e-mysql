@@ -1,15 +1,13 @@
-<?php include "cabecalho.php" ?>
-<?php include "connection.php" ?>
-<?php
+<?php 
+    include "cabecalho.php";
+    include "connection.php";
+    include "banco-produto.php" 
+?>
 
-function insereProduto($conn,$nome,$preco){
-    $query = "insert into produtos(nome,preco) values('{$nome}', {$preco})";
-    return mysqli_query($conn,$query);
-}
+<?php
 
     $nome = $_GET["nome"];
     $preco = $_GET["preco"];
-
 
 if(insereProduto($conn, $nome, $preco)){ ?>
 
