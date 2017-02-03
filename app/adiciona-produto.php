@@ -6,10 +6,11 @@
 
 <?php
 
-    $nome = $_GET["nome"];
-    $preco = $_GET["preco"];
+    $nome = $_POST["nome"];
+    $preco = $_POST["preco"];
+    $descricao = $_POST["descricao"];
 
-if(insereProduto($conn, $nome, $preco)){ ?>
+if(insereProduto($conn, $nome, $preco, $descricao)){ ?>
 
    <p class="alert-success">Produto <?= $nome ?>, <?= $preco ?> adicionado com sucesso!</p>
 <?php } else{ 
