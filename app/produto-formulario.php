@@ -18,14 +18,20 @@
             </tr>
             <tr>
                 <td><label for="descricao">Descrição:</label></td>
-                <td><textarea name="descricao" class="form-control"></textarea></br></td>
+                 <td><textarea name="descricao" class="form-control"></textarea></br></td>
+            </tr>
+            <tr>
+                <td></td>
+                 <td><input type="checkbox" name="usado" value="true">Usado</br></td>
             </tr>
             <tr>
                 <td><label for="preco">Categorias:</label></td>
                 <td>
-                    <?php foreach($categorias as $categoria): ?>
-                    <input type="radio"  name ="categoria_id" value="<?=$categoria["id"] ?>"><?=$categoria["nome"] ?></br>
-                    <?php endforeach?>
+                    <select name="categoria_id" class="form-control">
+                        <?php foreach($categorias as $categoria): ?>
+                            <option value="<?=$categoria["id"] ?>"><?=$categoria["nome"] ?></option>
+                        <?php endforeach?>
+                    </select>
                  </td>
             </tr>
             <tr>
