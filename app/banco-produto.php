@@ -10,7 +10,13 @@
     }
     
     function insereProduto($conn,$nome,$preco){
-    $query = "insert into produtos(nome,preco) values('{$nome}', {$preco})";
-    return mysqli_query($conn,$query);
-}
+        $query = "insert into produtos(nome,preco) values('{$nome}', {$preco})";
+        return mysqli_query($conn,$query);
+
+    }
+
+    function removeProduto($conn, $id){
+        $query = "delete from produtos where id = {$id}";
+        return mysqli_query($conn,$query);
+    }
 ?>
