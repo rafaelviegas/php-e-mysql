@@ -15,6 +15,20 @@
         return mysqli_query($conn,$query);
     }
 
+    function alteraProduto($conn, $id, $nome, $preco, $descricao, $categoria_id, $usado){
+
+        $query = "update produtos set nome = '{$nome}', preco = {$preco}, descricao = '{$descricao}', categoria_id = $categoria_id, usado = $usado where id = {$id};";
+        return mysqli_query($conn,$query);
+    
+     }
+
+    function buscaProduto($conn, $id){
+
+          $query = "select * from produtos where id = {$id}";
+
+          return mysqli_fetch_assoc(mysqli_query($conn, $query));
+    }
+
     function removeProduto($conn, $id){
         
         $query = "delete from produtos where id = {$id}";
